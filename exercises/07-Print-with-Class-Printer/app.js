@@ -10,12 +10,19 @@ class Printer{
     
     //you can add new functions here
   
-    printerTest() { 
-        return `My brand is ${this._brand} and my model ${this._model}`; 
+    printerTest() {
+        //Se utiliza $ solamente para las concatenaciones en strings para evitar el +
+        return `My brand is ${this._brand} and my model ${this._model}`;
     } 
     
     //you can add new class functions here
+    getModel(){
+        //return `The model of the printer is: ${this._model}`;
+        //return this._model;
+        return this._model;
+    }
 }
 
 let epsonPrinter = new Printer();
+//console.log(`The model of the printer is: ${epsonPrinter.getModel()}`);
 console.log("The model of the printer is: "+epsonPrinter.getModel());
